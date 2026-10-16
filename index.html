@@ -42,6 +42,16 @@ h1 span,.gold{color:var(--gold)}
 .trust strong{display:block;color:var(--gold);font-size:12px;letter-spacing:1px}
 .trust span{font-size:12px;color:var(--muted)}
 section{padding:76px 0}
+.byd-showcase{background:linear-gradient(180deg,#0b0b0b,#12100c);border-bottom:1px solid var(--line)}
+.byd-feature{display:grid;grid-template-columns:1.05fr .95fr;min-height:300px;border:1px solid var(--line);background:#111;overflow:hidden;margin-bottom:20px}
+.byd-feature-image{min-height:300px;background:linear-gradient(90deg,#08080818,#08080855),url('https://media.byd.com/wp-content/uploads/2025/10/32e097562c685d63742e92e76f88c76f.jpg.webp') center/cover}
+.byd-feature-copy{padding:clamp(22px,4vw,42px);display:flex;flex-direction:column;justify-content:center}
+.byd-feature-copy p{color:var(--muted);font-size:14px;max-width:480px}
+.byd-model-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.byd-model{min-height:155px;padding:20px;border:1px solid #342c20;background:linear-gradient(145deg,#1b1915,#101010);display:flex;flex-direction:column;justify-content:space-between}
+.byd-model .model-mark{font-size:12px;letter-spacing:3px;color:var(--gold)}
+.byd-model strong{font-size:19px;line-height:1.25}
+.byd-model small{color:var(--muted);font-size:11px}
 .section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
 h2{font-size:clamp(28px,4vw,42px);margin:8px 0;line-height:1.2}
 h3{margin:0}
@@ -100,9 +110,9 @@ footer strong{color:var(--gold);letter-spacing:2px}
 [dir=rtl] .hero{background:linear-gradient(270deg,#080808 0%,#080808ed 42%,#08080848 100%),url('https://media.byd.com/wp-content/uploads/2025/10/32e097562c685d63742e92e76f88c76f.jpg.webp') center/cover}
 [dir=rtl] .float-wa{right:auto;left:19px}
 [dir=rtl] .model-choice{direction:rtl}
-@media(max-width:950px){.navlinks{gap:12px}.car-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.car-img{height:200px}}
-@media(max-width:700px){.navlinks{display:none}.hero{min-height:500px}.hero-content{padding:68px 0}.trust-row{grid-template-columns:1fr;gap:12px}.trust-row>div{display:flex;justify-content:space-between;gap:10px;text-align:left;align-items:center}.about-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.about-img{height:250px}.map{height:270px}}
-@media(max-width:520px){.nav{min-height:68px;gap:8px}.brand{gap:7px}.brand-mark{width:36px;height:36px}.brand strong{font-size:11px;letter-spacing:1px}.brand small{font-size:9px;letter-spacing:2px}.lang{max-width:110px;font-size:12px;padding:9px 5px}.hero{min-height:480px}h1{letter-spacing:-1px}.car-grid{grid-template-columns:1fr}.car-img{height:225px}section{padding:55px 0}.section-head{align-items:start;flex-direction:column}.model-grid,.field-grid{grid-template-columns:1fr}.model-choice{grid-template-columns:1fr 100px}.form-card{padding:16px}.contact-card{padding:19px}.float-wa{right:12px;bottom:12px;padding:11px 14px;font-size:12px}[dir=rtl] .float-wa{left:12px;right:auto}}
+@media(max-width:950px){.navlinks{gap:12px}.byd-model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.car-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.car-img{height:200px}}
+@media(max-width:700px){.navlinks{display:none}.byd-feature{grid-template-columns:1fr}.byd-feature-image{min-height:220px}.hero{min-height:500px}.hero-content{padding:68px 0}.trust-row{grid-template-columns:1fr;gap:12px}.trust-row>div{display:flex;justify-content:space-between;gap:10px;text-align:left;align-items:center}.about-grid,.contact-grid{grid-template-columns:1fr;gap:25px}.about-img{height:250px}.map{height:270px}}
+@media(max-width:520px){.byd-model-grid{grid-template-columns:1fr 1fr}.byd-model{min-height:140px;padding:14px}.byd-model strong{font-size:16px}.nav{min-height:68px;gap:8px}.brand{gap:7px}.brand-mark{width:36px;height:36px}.brand strong{font-size:11px;letter-spacing:1px}.brand small{font-size:9px;letter-spacing:2px}.lang{max-width:110px;font-size:12px;padding:9px 5px}.hero{min-height:480px}h1{letter-spacing:-1px}.car-grid{grid-template-columns:1fr}.car-img{height:225px}section{padding:55px 0}.section-head{align-items:start;flex-direction:column}.model-grid,.field-grid{grid-template-columns:1fr}.model-choice{grid-template-columns:1fr 100px}.form-card{padding:16px}.contact-card{padding:19px}.float-wa{right:12px;bottom:12px;padding:11px 14px;font-size:12px}[dir=rtl] .float-wa{left:12px;right:auto}}
 </style>
 </head>
 <body>
@@ -114,6 +124,7 @@ footer strong{color:var(--gold);letter-spacing:2px}
     </a>
     <nav class="navlinks" aria-label="Main navigation">
       <a href="#home" data-i="navHome">Home</a>
+      <a href="#byd-showcase" data-i="navByd">BYD Models</a>
       <a href="#bulk-order" data-i="navOrder">Bulk Order</a>
       <a href="#about" data-i="navAbout">About Us</a>
       <a href="#contact" data-i="navContact">Contact</a>
@@ -141,6 +152,35 @@ footer strong{color:var(--gold);letter-spacing:2px}
   <div><strong data-i="trust2">BULK ORDER REQUESTS</strong><span data-i="trust2b">Request multiple units in one form</span></div>
   <div><strong data-i="trust3">GLOBAL DESTINATIONS</strong><span data-i="trust3b">Tell us your country and port</span></div>
 </div></div>
+
+
+<section id="byd-showcase" class="byd-showcase">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow" data-i="bydEyebrow">OFFICIAL BYD FOCUS · CHINA SOURCING</div>
+        <h2 data-i="bydTitle">Explore <span class="gold">BYD Vehicles</span></h2>
+        <p class="sub" data-i="bydIntro">Our vehicle showcase focuses exclusively on BYD. Ask our team about current showroom stock or request other BYD models from China.</p>
+      </div>
+    </div>
+    <div class="byd-feature">
+      <div class="byd-feature-image" role="img" aria-label="BYD vehicle showcase"></div>
+      <div class="byd-feature-copy">
+        <div class="eyebrow" data-i="bydFeatureTag">BYD · VEHICLE SOURCING</div>
+        <h2 data-i="bydFeatureTitle">Your BYD. <span class="gold">Your destination.</span></h2>
+        <p data-i="bydFeatureText">Looking for a BYD sedan, SUV, plug-in hybrid or electric vehicle? Tell us the model, year, trim and quantity. We will confirm availability and discuss sourcing and shipping options.</p>
+        <div class="actions"><a href="#bulk-order" class="btn btn-gold" data-i="bydCta">REQUEST A BYD QUOTE ↗</a></div>
+      </div>
+    </div>
+    <div class="byd-model-grid">
+      <article class="byd-model"><span class="model-mark">BYD · 01</span><strong>BYD Seal 05</strong><small data-i="bydModelNote">Ask for model year, trim and availability</small></article>
+      <article class="byd-model"><span class="model-mark">BYD · 02</span><strong>BYD Destroyer</strong><small data-i="bydModelNote">Ask for model year, trim and availability</small></article>
+      <article class="byd-model"><span class="model-mark">BYD · 03</span><strong>BYD Song Plus</strong><small data-i="bydModelNote">Ask for model year, trim and availability</small></article>
+      <article class="byd-model"><span class="model-mark">BYD · 04</span><strong>BYD Sealion</strong><small data-i="bydModelNote">Ask for model year, trim and availability</small></article>
+    </div>
+    <p class="fine-print" data-i="bydAvailability">Models shown are examples of BYD vehicles we can discuss sourcing. Current stock, specifications and export availability must be confirmed with our team.</p>
+  </div>
+</section>
 
 <section id="bulk-order" class="order-section">
   <div class="wrap">
@@ -230,7 +270,7 @@ footer strong{color:var(--gold);letter-spacing:2px}
 const PHONE = "9647504991160";
 const translations = {
 en:{
-navHome:"Home",navModels:"Our Models",navOrder:"Bulk Order",navAbout:"About Us",navContact:"Contact",
+navHome:"Home",navByd:"BYD Models",bydEyebrow:"BYD VEHICLES · CHINA SOURCING",bydTitle:"Explore BYD Vehicles",bydIntro:"Our vehicle showcase focuses exclusively on BYD. Ask our team about current showroom stock or request other BYD models from China.",bydFeatureTag:"BYD · VEHICLE SOURCING",bydFeatureTitle:"Your BYD. Your destination.",bydFeatureText:"Looking for a BYD sedan, SUV, plug-in hybrid or electric vehicle? Tell us the model, year, trim and quantity. We will confirm availability and discuss sourcing and shipping options.",bydCta:"REQUEST A BYD QUOTE ↗",bydModelNote:"Ask for model year, trim and availability",bydAvailability:"Models shown are examples of BYD vehicles we can discuss sourcing. Current stock, specifications and export availability must be confirmed with our team.",navModels:"Our Models",navOrder:"Bulk Order",navAbout:"About Us",navContact:"Contact",
 heroEyebrow:"CHINA CAR SOURCING · INTERNATIONAL SHIPPING",heroLine1:"Source Cars in China.",heroLine2:"Ship to Your Country.",heroText:"European Cars International helps dealers, importers and fleet buyers source vehicles from China and request export and international shipping quotations for destinations worldwide.",heroCta:"REQUEST A BULK QUOTE ↗",heroSecondary:"EXPLORE OUR MODELS",
 trust1:"ANY CAR FROM CHINA",trust1b:"Write the exact make and model you need",trust2:"BULK ORDER REQUESTS",trust2b:"Request multiple units in one form",trust3:"GLOBAL DESTINATIONS",trust3b:"Tell us your country and port",
 
@@ -240,7 +280,7 @@ contactEyebrow:"CONTACT EUROPEAN CARS INTERNATIONAL",contactTitle:"Let's Discuss
 errQuantity:"Please write at least one vehicle make/model and its quantity.",errInvalid:"Please check the quantities. Use whole numbers from 0 to 100,000.",errCountry:"Please enter the destination country.",errContact:"Please enter your name and WhatsApp number.",errPopup:"Your browser may have blocked the WhatsApp window. Use the WhatsApp button to contact us and submit your request manually.",msgTitle:"Hello European Cars International, I would like a bulk vehicle sourcing and shipping quotation.",msgModels:"VEHICLES AND QUANTITIES",msgCustomCars:"OTHER REQUESTED CARS FROM CHINA",msgCountry:"Destination country",msgDestination:"Destination port/city",msgShipping:"Preferred shipping",msgQuote:"Quotation preference",msgName:"Customer name",msgCompany:"Company",msgPhone:"WhatsApp",msgEmail:"Email",msgNotes:"Requirements",msgTotal:"Total units",msgEnd:"Please confirm availability, model specifications, vehicle prices and transport costs. Thank you."
 },
 ku:{
-navHome:"سەرەتا",navModels:"مۆدێلەکانمان",navOrder:"داواکاری بە کۆ",navAbout:"دەربارەمان",navContact:"پەیوەندی",
+navHome:"سەرەتا",navByd:"مۆدێلەکانی BYD",bydEyebrow:"ئۆتۆمبێلەکانی BYD · دابینکردن لە چین",bydTitle:"ئۆتۆمبێلەکانی BYD ببینە",bydIntro:"بەشی پیشاندانی ئۆتۆمبێلەکانمان تەنها تایبەتە بە BYD. لەبارەی ئۆتۆمبێلی ئامادە لە شووروم بپرسە یان داوای مۆدێلی تری BYD لە چین بکە.",bydFeatureTag:"BYD · دابینکردنی ئۆتۆمبێل",bydFeatureTitle:"BYD ـەکەت. شوێنی گەیاندنت.",bydFeatureText:"بەدوای سەدان، SUV، هایبریدی پڵاگین یان ئۆتۆمبێلی کارەبایی BYD دەگەڕێیت؟ مۆدێل، ساڵ، وەشان و ژمارە بنووسە. بەردەستبوون و شێوازی دابینکردن و گواستنەوە پشتڕاست دەکەینەوە.",bydCta:"داوای نرخی BYD بکە ↗",bydModelNote:"ساڵ، وەشان و بەردەستبوون بپرسە",bydAvailability:"ئەم مۆدێلانە نموونەن بۆ ئەو ئۆتۆمبێلانەی BYD کە دەتوانین لەبارەیانەوە گفتوگۆ بکەین. بەردەستبوونی ئێستا و تایبەتمەندییەکان دەبێت پشتڕاست بکرێنەوە.",navModels:"مۆدێلەکانمان",navOrder:"داواکاری بە کۆ",navAbout:"دەربارەمان",navContact:"پەیوەندی",
 heroEyebrow:"دابینکردنی ئۆتۆمبێل لە چین · گواستنەوەی نێودەوڵەتی",heroLine1:"ئۆتۆمبێل لە چین دابین بکە.",heroLine2:"بۆ وڵاتەکەت بینێرە.",heroText:"European Cars Erbil یارمەتی فرۆشیاران و کڕیارانی بە کۆ دەدات داوای ئۆتۆمبێلی دیاریکراو بکەن و زانیاری نرخ و گواستنەوە بۆ شوێنی مەبەست وەربگرن.",heroCta:"داوای نرخی کڕینی بە کۆ بکە ↗",heroSecondary:"مۆدێلەکان ببینە",
 trust1:"هەر ئۆتۆمبێلێک لە چین",trust1b:"ناوی مارکە و مۆدێلی پێویست بنووسە",trust2:"داواکاری بە کۆ",trust2b:"چەندین ئۆتۆمبێل لە یەک فۆڕمدا",trust3:"وڵاتانی جیهان",trust3b:"وڵات و بەندەرەکەت بنووسە",
 modelsEyebrow:"مۆدێلە هەڵبژێردراوەکانمان",modelsTitle:"ئۆتۆمبێلەکانت هەڵبژێرە",modelsText:"یەک یان چەند مۆدێل هەڵبژێرە. دەتوانیت هەر ئۆتۆمبێلێکی تری فرۆشراو لە چینیش لە فۆڕمی داواکارییەکەدا بنووسیت.",bydLabel:"BYD",sealText:"وەشان، ساڵی مۆدێل و ژمارەی پێویست دیاری بکە.",qinText:"ڕوون بکەرەوە کام وەشان و چەند دانە پێویستتە.",destroyerText:"بۆ وەشان و ژمارەی پێویستت داوای نرخ بکە.",qinLText:"وەشان، ساڵی مۆدێل و ژمارەی پێویست دیاری بکە.",selectModel:"ئەم مۆدێلە هەڵبژێرە ↓",
@@ -250,7 +290,7 @@ contactEyebrow:"پەیوەندی بە European Cars Erbil",contactTitle:"با د
 errQuantity:"تکایە ناوی لانیکەم یەک مارکە/مۆدێل و ژمارەی دانەکانی بنووسە.",errInvalid:"تکایە ژمارەکان بپشکنە؛ ژمارەی تەواو لە ٠ تا ١٠٠٬٠٠٠ بنووسە.",errCountry:"تکایە وڵاتی مەبەست بنووسە.",errContact:"تکایە ناو و ژمارەی واتسئەپ بنووسە.",errPopup:"لەوانەیە وێبگەڕەکەت پەنجەرەی واتسئەپ بلۆک کردبێت. دوگمەی واتسئەپ بەکاربهێنە.",msgTitle:"سڵاو European Cars International، داوای نرخی دابینکردن و گواستنەوەی ئۆتۆمبێلی بە کۆ دەکەم.",msgModels:"ئۆتۆمبێل و ژمارە",msgCustomCars:"ئۆتۆمبێلەکانی تری داواکراو لە چین",msgCountry:"وڵاتی مەبەست",msgDestination:"بەندەر/شاری مەبەست",msgShipping:"گواستنەوەی پێشنیارکراو",msgQuote:"جۆری نرخ",msgName:"ناوی کڕیار",msgCompany:"کۆمپانیا",msgPhone:"واتسئەپ",msgEmail:"ئیمەیڵ",msgNotes:"داواکارییەکان",msgTotal:"کۆی دانەکان",msgEnd:"تکایە بەردەستبوون، تایبەتمەندی مۆدێل، نرخی ئۆتۆمبێل و نرخی گواستنەوە پشتڕاست بکەنەوە. سوپاس."
 },
 ar:{
-navHome:"الرئيسية",navModels:"الموديلات",navOrder:"طلب بالجملة",navAbout:"من نحن",navContact:"اتصل بنا",
+navHome:"الرئيسية",navByd:"موديلات BYD",bydEyebrow:"سيارات BYD · التوريد من الصين",bydTitle:"اكتشف سيارات BYD",bydIntro:"يركز قسم السيارات لدينا على BYD فقط. اسأل فريقنا عن السيارات المتوفرة حاليًا في المعرض أو اطلب موديلات BYD أخرى من الصين.",bydFeatureTag:"BYD · توريد السيارات",bydFeatureTitle:"سيارة BYD إلى وجهتك.",bydFeatureText:"هل تبحث عن سيارة BYD سيدان أو SUV أو هجينة قابلة للشحن أو كهربائية؟ أرسل الموديل والسنة والفئة والكمية. سنؤكد التوفر ونناقش خيارات التوريد والشحن.",bydCta:"اطلب عرض سعر BYD ↗",bydModelNote:"اسأل عن سنة الموديل والفئة والتوفر",bydAvailability:"الموديلات المعروضة أمثلة لسيارات BYD التي يمكننا مناقشة توريدها. يجب تأكيد المخزون الحالي والمواصفات وإمكانية التصدير مع فريقنا.",navModels:"الموديلات",navOrder:"طلب بالجملة",navAbout:"من نحن",navContact:"اتصل بنا",
 heroEyebrow:"توريد السيارات من الصين · الشحن الدولي",heroLine1:"استورد السيارات من الصين.",heroLine2:"واشحنها إلى بلدك.",heroText:"تساعد European Cars Erbil التجار والمشترين بالجملة على طلب سيارات مختارة من الصين والحصول على عرض أسعار للتصدير والنقل إلى وجهتهم.",heroCta:"اطلب عرض سعر بالجملة ↗",heroSecondary:"استكشف الموديلات",
 trust1:"أي سيارة من الصين",trust1b:"اكتب الماركة والموديل المطلوبين",trust2:"طلبات بالجملة",trust2b:"اطلب عدة سيارات في نموذج واحد",trust3:"وجهات عالمية",trust3b:"أدخل بلدك والميناء",
 modelsEyebrow:"الموديلات المختارة",modelsTitle:"اختر سياراتك",modelsText:"اختر موديلًا واحدًا أو عدة موديلات. يمكنك أيضًا كتابة اسم أي سيارة أخرى تُباع في الصين في حقل الطلب المخصص.",bydLabel:"BYD",sealText:"حدد النسخة وسنة الموديل والكمية المطلوبة.",qinText:"أخبرنا بالتجهيز والعدد الذي تحتاجه.",destroyerText:"اطلب عرض سعر للفئة والكمية المطلوبة.",qinLText:"حدد النسخة وسنة الموديل والكمية المطلوبة.",selectModel:"اختر الموديل ↓",
